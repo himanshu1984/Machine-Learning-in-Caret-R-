@@ -1,5 +1,6 @@
 # Machine-Learning-in-Caret-R-
 Applying Random Forest, linear regression and Logistic regression on Insurance data through CARET package in R
+
 library(caret)
 library(dplyr)
 
@@ -11,11 +12,11 @@ str(data)
 
 ggplot(data,aes(age,bmi))+geom_point(aes(color=data$smoker))
 
-##relationship between charges, bmi and smoker (this graphs shows interesting point: for smokers, relationship between charges and bmi seems to be linear)
+##relationship between charges, bmi and smoker (this graph shows an interesting point: for smokers, relationship between charges and bmi seems to be linear)
 
 ggplot(data,aes(charges,bmi))+geom_point(aes(color=data$smoker))
 
-##relationship between charges, age and smoker(sameways smoker pays higher insurance premiuim regardless of their age)
+##relationship between charges, age and smoker(sameways a smoker pays higher insurance premiuim regardless of their age)
 
 ggplot(data,aes(charges,age))+geom_point(aes(color=data$smoker))
 
@@ -113,7 +114,7 @@ confusionMatrix(model.LOR.pre,test.class$smoker)
 
 
 
-##modeling the data for Smoker category only (predicting charges through random forest and linear regression)
+## modelling the data for Smoker category only (predicting charges through random forest and linear regression)
 
 
 data=read.csv(file="C:\\Users\\lenovo\\Desktop\\Himanshu\\insurance.csv")
