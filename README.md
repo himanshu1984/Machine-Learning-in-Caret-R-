@@ -1,5 +1,5 @@
 # Machine-Learning-in-Caret-R-
-Applying Random Forest, linear regression and Logistic regression on Insurance data through CARET package in R
+## Applying Random Forest, linear regression and Logistic regression on Insurance data through CARET package in R
 
 library(caret)
 library(dplyr)
@@ -64,7 +64,7 @@ pre.LR=predict(model.LR,test.data)
 
 postResample(pre.LR,test.data$charges)
 
-## assessing Variable Importance (we see that most important variable is non smoker in predicting charges, just beacause dummy variable model assigns 1 mostly to non smoker category)
+##assessing Variable Importance (we see that most important variable is non smoker in predicting charges, just beacause dummy variable model assigns 1 mostly to non smoker category)
 
 plot(varImp(model.LR))
 
